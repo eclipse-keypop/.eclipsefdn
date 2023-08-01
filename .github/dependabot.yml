@@ -1,0 +1,13 @@
+version: 2
+updates:
+- package-ecosystem: github-actions
+  directory: "/"
+  # We scan and create dependabot PRs against the develop branch only.
+  # Such a branch only exists for the template master at EclipseFdn/.eclipsefdn-template
+  # dependabot shall only update the template master, and changes will be synchronized to
+  # all repos by otterdog using the sync-template operation to avoid having many similar
+  # dependabot PRs for each individual .eclipsefdn repo which we would like to avoid at all costs.
+  target-branch: "develop"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10

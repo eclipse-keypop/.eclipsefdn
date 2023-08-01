@@ -1,0 +1,103 @@
+name: Validate Otterdog Configuration
+
+on:
+  workflow_dispatch:
+  pull_request_target:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    # do not run the workflow in the template repo itself
+    if: ${{ !contains (github.repository, '/.eclipsefdn-template') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout OtterDog
+        run: git clone https://gitlab.eclipse.org/eclipsefdn/security/otterdog.git
+
+      - name: Checkout EclipseFdn/otterdog-configs
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+        with:
+          repository: EclipseFdn/otterdog-configs
+          path: otterdog-configs
+
+      # checkout the head ref of the PR
+      # NOTE: in general it is bad practice to check out the pull request HEAD for PRs originating from forked repos,
+      #       however, this validation workflow produces a diff between the changes in the PR with the base ref, thus
+      #       doing this is acceptable, see https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
+      - name: Checkout HEAD ref of the PR
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: ${{ github.repository_owner }}
+
+      # checkout the base ref of the PR
+      - name: Checkout BASE ref of the PR (target branch)
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+        with:
+          ref: ${{ github.base_ref }}
+          path: ${{ github.repository_owner }}-base
+
+      - name: Install jsonnet-bundler
+        run: |
+          go install -a github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb@v0.5.1
+          echo $(go env GOPATH)/bin >> $GITHUB_PATH
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Setup Python
+        uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4.7.0
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+
+      - name: Install dependencies with poetry
+        run: |
+          poetry install --only=main
+        working-directory: otterdog
+
+      - name: Copy configuration from HEAD and BASE ref
+        run: |
+          mkdir -p orgs/${{ github.repository_owner }}
+          cp -r ../${{ github.repository_owner }}/otterdog/* orgs/${{ github.repository_owner }}
+          cp ../${{ github.repository_owner }}-base/otterdog/${{ github.repository_owner }}.jsonnet orgs/${{ github.repository_owner }}/${{ github.repository_owner }}.jsonnet-BASE 
+        working-directory: otterdog-configs
+
+      - name: Validate Otterdog Configuration and diff HEAD <-> BASE
+        run: |
+          # use script to enable ansi color output
+          script -q /dev/null --command "../otterdog/otterdog.sh local-plan ${{ github.repository_owner }} -c otterdog.json --suffix=-BASE" | tee "$GITHUB_WORKSPACE/diff-ansi.txt"
+          # filter out ansi escape sequences again, use sed as ansi2txt is not available
+          cat "$GITHUB_WORKSPACE/diff-ansi.txt" | sed -e 's/\x1b\[[0-9;]*m//g' | sed -E 's/^([[:space:]]+)([-+!])/\2\1/g' | sed -E 's/^([[:space:]]+)([~])/!\1/g' > "$GITHUB_WORKSPACE/diff.txt"
+        working-directory: otterdog-configs
+
+      - name: Generate canonical diff
+        run: ../otterdog/otterdog.sh canonical-diff ${{ github.repository_owner }} -c otterdog.json | tee "$GITHUB_WORKSPACE/canonical-diff.txt"
+        working-directory: otterdog-configs
+
+      # Add a comment to the pull request with the diff
+
+      - name: Generate comment
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
+        with:
+          script: |
+            const commentText = 'Diff for ' + context.payload.pull_request.head.sha + ':';
+
+            const fs = require('fs');
+            const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/diff.txt').toString().trimEnd();
+            const canonicalDiff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/canonical-diff.txt').toString().trimEnd();
+
+            var body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n```diff\n" + canonicalDiff + "\n```\n\n</details>";
+            fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, body);
+            fs.writeFileSync(process.env.GITHUB_WORKSPACE + '/comment.txt', body);
+
+      - name: Attach comment to PR
+        uses: marocchino/sticky-pull-request-comment@f61b6cf21ef2fcc468f4345cdfcc9bda741d2343 # v2.6.2
+        with:
+          hide_and_recreate: true
+          hide_classify: "OUTDATED"
+          path: ${{ github.workspace }}/comment.txt
