@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/EclipseFdn/otterdog-defaults.git",
+          "subdir": ""
+        }
+      },
+      "version": "main"
+    }
+  ],
+  "legacyImports": true
+}
