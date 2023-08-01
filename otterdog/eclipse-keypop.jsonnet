@@ -27,13 +27,30 @@ orgs.newOrg('eclipse-keypop') {
     },
     orgs.newRepo('keypop-calypso-card-java-api') {
       allow_update_branch: false,
+      description: "Repository Eclipse Keypop project containing a Java implementation of Calypso Networks Association's reference Terminal Calypso Card API",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "java",
+        "keypop"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-cpp-api') {
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-java-api') {
       allow_update_branch: false,
-      description: "keypop-calypso-crypto-asymmetric-java-api",
+      description: "Repository Eclipse Keypop project containing a Java implementation of Calypso Networks Association's reference Terminal Calypso Asymmetric Crypto API",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "java",
+        "keypop"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-cpp-api') {
@@ -42,13 +59,30 @@ orgs.newOrg('eclipse-keypop') {
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-java-api') {
       allow_update_branch: false,
+      description: "Repository Eclipse Keypop project containing a Java implementation of Calypso Networks Association's reference Terminal Calypso Legacy SAM Crypto API",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "java",
+        "keypop"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-cpp-api') {
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-java-api') {
       allow_update_branch: false,
-      description: "keypop-calypso-crypto-symmetric-java-api",
+      description: "Repository Eclipse Keypop project containing a Java implementation of Calypso Networks Association's reference Terminal Calypso Symmetric Crypto API",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "java",
+        "keypop"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-card-cpp-api') {
@@ -57,6 +91,15 @@ orgs.newOrg('eclipse-keypop') {
     },
     orgs.newRepo('keypop-card-java-api') {
       allow_update_branch: false,
+      description: "Repository Eclipse Keypop project containing a Java implementation of Calypso Networks Association's reference Terminal Card API",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "java",
+        "keypop"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-reader-cpp-api') {
@@ -65,6 +108,15 @@ orgs.newOrg('eclipse-keypop') {
     },
     orgs.newRepo('keypop-reader-java-api') {
       allow_update_branch: false,
+      description: "Eclipse Keypop project repository containing a Java implementation of Calypso Networks Association's reference Terminal Reader API",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "java",
+        "keypop"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-website') {
