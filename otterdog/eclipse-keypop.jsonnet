@@ -29,6 +29,8 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('keypop-calypso-crypto-asymmetric-cpp-api') {
+    },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-java-api') {
       allow_update_branch: false,
       description: "keypop-calypso-crypto-asymmetric-java-api",
@@ -41,6 +43,8 @@ orgs.newOrg('eclipse-keypop') {
     orgs.newRepo('keypop-calypso-crypto-legacysam-java-api') {
       allow_update_branch: false,
       web_commit_signoff_required: false,
+    },
+    orgs.newRepo('keypop-calypso-crypto-symmetric-cpp-api') {
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-java-api') {
       allow_update_branch: false,
