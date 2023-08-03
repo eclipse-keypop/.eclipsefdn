@@ -32,7 +32,7 @@ orgs.newOrg('eclipse-keypop') {
       topics+: [
         "api",
         "component",
-        "c++",
+        "cpp",
         "keypop"
       ],
       web_commit_signoff_required: false,
@@ -60,7 +60,7 @@ orgs.newOrg('eclipse-keypop') {
       topics+: [
         "api",
         "component",
-        "c++",
+        "cpp",
         "keypop"
       ],
       web_commit_signoff_required: false,
@@ -88,7 +88,7 @@ orgs.newOrg('eclipse-keypop') {
       topics+: [
         "api",
         "component",
-        "c++",
+        "cpp",
         "keypop"
       ],
       web_commit_signoff_required: false,
@@ -116,7 +116,7 @@ orgs.newOrg('eclipse-keypop') {
       topics+: [
         "api",
         "component",
-        "c++",
+        "cpp",
         "keypop"
       ],
       web_commit_signoff_required: false,
@@ -144,7 +144,7 @@ orgs.newOrg('eclipse-keypop') {
       topics+: [
         "api",
         "component",
-        "c++",
+        "cpp",
         "keypop"
       ],
       web_commit_signoff_required: false,
@@ -172,7 +172,7 @@ orgs.newOrg('eclipse-keypop') {
       topics+: [
         "api",
         "component",
-        "c++",
+        "cpp",
         "keypop"
       ],
       web_commit_signoff_required: false,
