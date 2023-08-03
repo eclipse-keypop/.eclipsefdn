@@ -52,7 +52,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -77,7 +77,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -102,7 +102,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -127,7 +127,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        org.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -152,7 +152,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -177,7 +177,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -202,7 +202,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -227,7 +227,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -252,7 +252,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -277,7 +277,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -302,7 +302,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
@@ -327,7 +327,7 @@ orgs.newOrg('eclipse-keypop') {
       allow_update_branch: false,
       description: "Repository hosting the Eclipse Keypop project website: https://keypop.org/",
       environments: [
-        newEnvironment('github-pages') {
+        orgs.newEnvironment('github-pages') {
           branch_policies: [
             "gh-pages"
           ],
