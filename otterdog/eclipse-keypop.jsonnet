@@ -41,11 +41,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-calypso-card-java-api') {
@@ -66,11 +66,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-cpp-api') {
@@ -91,11 +91,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-java-api') {
@@ -116,11 +116,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-cpp-api') {
@@ -141,11 +141,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-java-api') {
@@ -166,11 +166,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-cpp-api') {
@@ -191,11 +191,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-java-api') {
@@ -216,11 +216,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-card-cpp-api') {
@@ -241,11 +241,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-card-java-api') {
@@ -266,11 +266,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-reader-cpp-api') {
@@ -291,11 +291,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-reader-java-api') {
@@ -316,11 +316,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
     orgs.newRepo('keypop-website') {
@@ -339,11 +339,11 @@ orgs.newOrg('eclipse-keypop') {
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
-          branch_policies: [
+          branch_policies+: [
             "gh-pages"
           ],
           deployment_branch_policy: "selected",
-        }
+        },
       ],
     },
   ],
