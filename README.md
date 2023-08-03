@@ -1,7 +1,7 @@
-# .eclipsefdn
+# Eclipse Foundation Config Repo
 
 Repository to host configurations related to the Eclipse Foundation.
 
-## Self service of GitHub organizations
+## Self service of your GitHub organization
 
-Please find more information at <https://eclipse-keypop.github.io/.eclipsefdn/>.
+You can find more information at <https://eclipse-keypop.github.io/.eclipsefdn/>.
