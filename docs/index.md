@@ -8,6 +8,10 @@ hide:
 
 General documentation for using the self-service (stored in directory *otterdog*) can be accessed at [otterdog.readthedocs.io](https://otterdog.readthedocs.io).
 
+## Current configuration
+
+The current configuration can be reviewed [here](configuration.md).
+
 ## Default values
 
 The following snippets illustrate the default values that are inherited from the [default configuration](https://github.com/EclipseFdn/otterdog-defaults/blob/main/otterdog-defaults.libsonnet) 
