@@ -67,15 +67,21 @@ jobs:
           cp -r ../${{ github.repository_owner }}/otterdog/* orgs/${{ github.repository_owner }}
         working-directory: otterdog-configs
 
+      - name: Generate current configuration as markdown
+        run: ../otterdog/otterdog.sh show ${{ github.repository_owner }} -c otterdog.json --markdown --output-dir generated-site
+        working-directory: otterdog-configs
+
       - name: Generate default configuration as markdown
         run: ../otterdog/otterdog.sh show-default ${{ github.repository_owner }} -c otterdog.json --markdown > default.txt
         working-directory: otterdog-configs
 
-      - name: Upload default text snippet
+      - name: Upload generated site content
         uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3
         with:
-          name: default-text
-          path: otterdog-configs/default.txt
+          name: generated-site
+          path: |
+            otterdog-configs/default.txt
+            otterdog-configs/generated-site/
 
   build-page:
     runs-on: ubuntu-latest
@@ -85,10 +91,11 @@ jobs:
       - name: Download default-text
         uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a # v3
         with:
-          name: default-text
+          name: generated-site
       - shell: bash
         run: |
           cat default.txt >> ./docs/index.md
+          cp generated-site/*.md ./docs/
       - uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4
         with:
           python-version: 3.x
