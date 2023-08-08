@@ -19,7 +19,8 @@ orgs.newOrg('eclipse-keypop') {
     web_commit_signoff_required: false,
   },
   _repositories+:: [
-    orgs.newRepo('keypop') {
+    orgs.newRepo('.github') {
+      aliases: ["keypop"],
       allow_update_branch: false,
       web_commit_signoff_required: false,
     },
