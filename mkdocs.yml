@@ -10,6 +10,8 @@ site_dir: ./_site
 theme:
   name: 'material'
   custom_dir: docs/overrides
+  features:
+    - navigation.tabs
 
 markdown_extensions:
   - pymdownx.superfences
@@ -23,5 +25,15 @@ markdown_extensions:
 plugins:
   - macros
 
-nav: []
+nav:
+  - Overview: index.md
+  - configuration.md
+  - playground.md
+
+not_in_nav: |
+  repo-*.md
+
 watch: []
+
+extra_css:
+  - stylesheets/extra.css
