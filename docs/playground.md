@@ -52,5 +52,5 @@ You can use the playground below to create and evaluate resource snippets to inc
 
 ## Resource functions and default values
 
-The following snippets illustrate the functions to create the supported resources with default values as defined in the [default configuration](https://github.com/EclipseFdn/otterdog-defaults/blob/main/otterdog-defaults.libsonnet).
-used at the Eclipse Foundation.
+The following snippets illustrate the functions to create the supported resources with default values as defined in the 
+[default configuration](https://github.com/EclipseFdn/otterdog-defaults/blob/main/otterdog-defaults.libsonnet) used at the Eclipse Foundation.
