@@ -12,7 +12,6 @@ General documentation for using the self-service (stored in directory *otterdog*
 
 The current configuration can be reviewed [here](configuration.md).
 
-## Default values
+## Playground
 
-The following snippets illustrate the default values that are inherited from the [default configuration](https://github.com/EclipseFdn/otterdog-defaults/blob/main/otterdog-defaults.libsonnet) 
-used at the Eclipse Foundation in a more human readable form.
+A playground for creating and testing resources in jsonnet format is available [here](playground.md).
