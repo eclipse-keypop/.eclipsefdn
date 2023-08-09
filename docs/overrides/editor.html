@@ -27,7 +27,6 @@
 {% endblock %}
 
 {% block styles %}
-  {{ super() }}
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
 
@@ -41,4 +40,5 @@
   <link rel="stylesheet" media="screen and (min-width: 1296px)" href="https://eclipsefdn.github.io/otterdog-assets/css/desktop.css">
   <link rel="stylesheet" media="screen and (max-width: 1295px) and (min-width: 720px)" href="https://eclipsefdn.github.io/otterdog-assets/css/cellphone.css">
   <link rel="stylesheet" media="screen and (max-width: 719px)" href="https://eclipsefdn.github.io/otterdog-assets/css/cellphone-small.css">
+  {{ super() }}
 {% endblock %}
