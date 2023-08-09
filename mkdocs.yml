@@ -9,6 +9,7 @@ site_dir: ./_site
 
 theme:
   name: 'material'
+  custom_dir: docs/overrides
 
 markdown_extensions:
   - pymdownx.superfences
@@ -19,6 +20,8 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
-plugins: []
+plugins:
+  - macros
+
 nav: []
 watch: []
