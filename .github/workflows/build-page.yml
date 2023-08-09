@@ -81,6 +81,7 @@ jobs:
           name: generated-site
           path: |
             otterdog-configs/default.txt
+            otterdog-configs/orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet
             otterdog-configs/generated-site/
 
   build-page:
@@ -88,14 +89,15 @@ jobs:
     needs: generate-markdown
     steps:
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
-      - name: Download default-text
+      - name: Download generated site content
         uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a # v3
         with:
           name: generated-site
       - shell: bash
         run: |
-          cat default.txt >> ./docs/index.md
+          cat default.txt >> ./docs/playground.md
           cp generated-site/*.md ./docs/
+          cp orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet ./docs/jsonnet/
       - uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4
         with:
           python-version: 3.x
