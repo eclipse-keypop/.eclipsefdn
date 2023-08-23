@@ -22,6 +22,14 @@ orgs.newOrg('eclipse-keypop') {
     orgs.newRepo('.github') {
       aliases: ["keypop"],
       allow_update_branch: false,
+      description: "Repository hosting settings of GitHub organization & repositories for the Eclipse Keypop project",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "keypop",
+        "support"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-card-cpp-api') {
@@ -273,6 +281,18 @@ orgs.newOrg('eclipse-keypop') {
           deployment_branch_policy: "selected",
         },
       ],
+    },
+    orgs.newRepo('keypop-ops') {
+      allow_update_branch: false,
+      description: "Repository hosting the Continuous Integration settings of the Eclipse Keypop project",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "keypop",
+        "support"
+      ],
+      web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-reader-cpp-api') {
       allow_update_branch: false,
