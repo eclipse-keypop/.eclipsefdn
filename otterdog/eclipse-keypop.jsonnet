@@ -9,8 +9,6 @@ orgs.newOrg('eclipse-keypop') {
     description: "Organization grouging together all the Eclipse Keypop project repositories",
     email: "keypop-dev@eclipse.org",
     members_can_change_project_visibility: false,
-    members_can_change_repo_visibility: true,
-    members_can_delete_repositories: true,
     name: "Eclipse Keypop",
     packages_containers_internal: false,
     packages_containers_public: false,
@@ -20,7 +18,6 @@ orgs.newOrg('eclipse-keypop') {
   },
   _repositories+:: [
     orgs.newRepo('.github') {
-      aliases: ["keypop"],
       allow_update_branch: false,
       description: "Repository hosting settings of GitHub organization & repositories for the Eclipse Keypop project",
       has_projects: false,
@@ -73,6 +70,11 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "********",
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -123,6 +125,11 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "********",
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -173,6 +180,11 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "********",
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -223,6 +235,11 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "********",
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -273,6 +290,11 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "********",
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -335,6 +357,11 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "********",
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
