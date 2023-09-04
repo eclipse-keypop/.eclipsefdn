@@ -5,6 +5,7 @@ orgs.newOrg('eclipse-keypop') {
     billing_email: "webmaster@eclipse.org",
     blog: "https://keypop.org/",
     default_repository_permission: "none",
+    default_workflow_permissions: "write",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Organization grouging together all the Eclipse Keypop project repositories",
     email: "keypop-dev@eclipse.org",
