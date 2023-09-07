@@ -15,7 +15,19 @@ orgs.newOrg('eclipse-keypop') {
     readers_can_create_discussions: true,
     two_factor_requirement: false,
     web_commit_signoff_required: false,
+    workflows+: {
+      actions_can_approve_pull_request_reviews: false,
+    },
   },
+  webhooks+: [
+    orgs.newOrgWebhook('https://ci.eclipse.org/keypop/github-webhook/') {
+      content_type: "json",
+      events+: [
+        "pull_request",
+        "push"
+      ],
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_update_branch: false,
