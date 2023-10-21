@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://eclipse-keypop.github.io/.eclipsefdn/
 
+repo_name: eclipse-keypop/.eclipsefdn
+repo_url: https://github.com/eclipse-keypop/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
