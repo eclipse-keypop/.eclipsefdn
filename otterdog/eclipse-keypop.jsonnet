@@ -4,7 +4,6 @@ orgs.newOrg('eclipse-keypop') {
   settings+: {
     billing_email: "webmaster@eclipse.org",
     blog: "https://keypop.org/",
-    default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Organization grouging together all the Eclipse Keypop project repositories",
     email: "keypop-dev@eclipse.org",
@@ -42,6 +41,9 @@ orgs.newOrg('eclipse-keypop') {
         "support"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('keypop-calypso-card-cpp-api') {
       allow_merge_commit: true,
@@ -61,6 +63,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -88,6 +93,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       secrets: [
         orgs.newRepoSecret('SONAR_TOKEN') {
           value: "********",
@@ -120,6 +128,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -147,6 +158,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       secrets: [
         orgs.newRepoSecret('SONAR_TOKEN') {
           value: "********",
@@ -179,6 +193,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -206,6 +223,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       secrets: [
         orgs.newRepoSecret('SONAR_TOKEN') {
           value: "********",
@@ -238,6 +258,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -265,6 +288,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       secrets: [
         orgs.newRepoSecret('SONAR_TOKEN') {
           value: "********",
@@ -297,6 +323,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -324,6 +353,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       secrets: [
         orgs.newRepoSecret('SONAR_TOKEN') {
           value: "********",
@@ -351,6 +383,9 @@ orgs.newOrg('eclipse-keypop') {
         "support"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('keypop-reader-cpp-api') {
       allow_merge_commit: true,
@@ -370,6 +405,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -397,6 +435,9 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       secrets: [
         orgs.newRepoSecret('SONAR_TOKEN') {
           value: "********",
@@ -427,6 +468,9 @@ orgs.newOrg('eclipse-keypop') {
         "support"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
