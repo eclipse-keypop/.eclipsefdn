@@ -19,7 +19,7 @@ jobs:
         run: git clone https://gitlab.eclipse.org/eclipsefdn/security/otterdog.git
 
       - name: Checkout EclipseFdn/otterdog-configs
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           repository: EclipseFdn/otterdog-configs
           path: otterdog-configs
@@ -29,14 +29,14 @@ jobs:
       #       however, this validation workflow produces a diff between the changes in the PR with the base ref, thus
       #       doing this is acceptable, see https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
       - name: Checkout HEAD ref of the PR
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: ${{ github.repository_owner }}
 
       # checkout the base ref of the PR
       - name: Checkout BASE ref of the PR (target branch)
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           ref: ${{ github.base_ref }}
           path: ${{ github.repository_owner }}-base
@@ -50,7 +50,7 @@ jobs:
         run: pipx install poetry
 
       - name: Setup Python
-        uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4.7.0
+        uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
         with:
           python-version: '3.10'
           cache: 'poetry'
@@ -82,16 +82,19 @@ jobs:
       # Add a comment to the pull request with the diff
 
       - name: Generate comment
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           script: |
             const commentText = 'Diff for ' + process.env.GITHUB_SHA + ':';
+            const canonicalCommentText = 'Canonical Diff for ' + process.env.GITHUB_SHA + ':';
 
             const fs = require('fs');
             const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/diff.txt').toString().trimEnd();
             const canonicalDiff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/canonical-diff.txt').toString().trimEnd();
 
-            var body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n```diff\n" + canonicalDiff + "\n```\n\n</details>";
+            var body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n</details>\n" +
+                       "<details>\n<summary>" + canonicalCommentText + "</summary>\n\n```diff\n" + canonicalDiff + "\n```\n\n</details>";
+
             fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, body);
             fs.writeFileSync(process.env.GITHUB_WORKSPACE + '/comment.txt', body);
 
