@@ -68,9 +68,11 @@ jobs:
         working-directory: otterdog-configs
 
       - name: Validate Otterdog Configuration and diff HEAD <-> BASE
+        id: validate
         run: |
           # use script to enable ansi color output
-          script -q /dev/null --command "../otterdog/otterdog.sh local-plan ${{ github.repository_owner }} -c otterdog.json --suffix=-BASE" | tee "$GITHUB_WORKSPACE/diff-ansi.txt"
+          script -e -q /dev/null --command "../otterdog/otterdog.sh local-plan ${{ github.repository_owner }} -c otterdog.json --suffix=-BASE" | tee "$GITHUB_WORKSPACE/diff-ansi.txt"
+          echo "VALIDATION_STATUS=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
           # filter out ansi escape sequences again, use sed as ansi2txt is not available
           cat "$GITHUB_WORKSPACE/diff-ansi.txt" | sed -e 's/\x1b\[[0-9;]*m//g' | sed -E 's/^([[:space:]]+)([-+!])/\2\1/g' | sed -E 's/^([[:space:]]+)([~])/!\1/g' > "$GITHUB_WORKSPACE/diff.txt"
         working-directory: otterdog-configs
@@ -104,3 +106,7 @@ jobs:
           hide_and_recreate: true
           hide_classify: "OUTDATED"
           path: ${{ github.workspace }}/comment.txt
+
+      - name: Propagate validation exit status
+        run: |
+          exit ${{ steps.validate.outputs.VALIDATION_STATUS }}
