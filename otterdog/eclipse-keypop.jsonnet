@@ -6,7 +6,6 @@ orgs.newOrg('eclipse-keypop') {
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Organization grouging together all the Eclipse Keypop project repositories",
     email: "keypop-dev@eclipse.org",
-    members_can_change_project_visibility: false,
     name: "Eclipse Keypop",
     packages_containers_internal: false,
     packages_containers_public: false,
