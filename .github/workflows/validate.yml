@@ -78,7 +78,10 @@ jobs:
         working-directory: otterdog-configs
 
       - name: Generate canonical diff
-        run: ../otterdog/otterdog.sh canonical-diff ${{ github.repository_owner }} -c otterdog.json | tee "$GITHUB_WORKSPACE/canonical-diff.txt"
+        run: |
+          ../otterdog/otterdog.sh canonical-diff ${{ github.repository_owner }} -c otterdog.json | tee "$GITHUB_WORKSPACE/canonical-diff-ansi.txt"
+          # filter out ansi escape sequences
+          cat "$GITHUB_WORKSPACE/canonical-diff-ansi.txt" | sed -e 's/\x1b\[[0-9;]*m//g' | sed -E 's/^([[:space:]]+)([-+!])/\2\1/g' | sed -E 's/^([[:space:]]+)([~])/!\1/g' > "$GITHUB_WORKSPACE/canonical-diff.txt"
         working-directory: otterdog-configs
 
       # Add a comment to the pull request with the diff
