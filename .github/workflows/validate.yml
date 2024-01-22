@@ -15,8 +15,11 @@ jobs:
     if: ${{ !contains (github.repository, '/.eclipsefdn-template') }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout OtterDog
-        run: git clone https://gitlab.eclipse.org/eclipsefdn/security/otterdog.git
+      - name: Checkout eclipse-csi/otterdog
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          repository: eclipse-csi/otterdog
+          path: otterdog
 
       - name: Checkout EclipseFdn/otterdog-configs
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
