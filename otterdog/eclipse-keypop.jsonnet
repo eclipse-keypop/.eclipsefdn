@@ -91,11 +91,66 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
         },
       ],
+    },
+    orgs.newRepo('keypop-calypso-certificate-cpp-api') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "component",
+        "cpp",
+        "keypop"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
+    orgs.newRepo('keypop-calypso-certificate-java-api') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "api",
+        "component",
+        "java",
+        "keypop"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -156,11 +211,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -221,11 +271,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -286,11 +331,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -351,11 +391,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -433,11 +468,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
