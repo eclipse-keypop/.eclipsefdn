@@ -91,11 +91,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -156,11 +151,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -221,11 +211,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -286,11 +271,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -351,11 +331,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -416,11 +391,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -498,11 +468,6 @@ orgs.newOrg('eclipse-keypop') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      secrets: [
-        orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
