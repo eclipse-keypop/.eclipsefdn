@@ -36,9 +36,6 @@ orgs.newOrg('eclipse-keypop') {
         "support"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
     orgs.newRepo('keypop-calypso-card-cpp-api') {
       allow_merge_commit: true,
@@ -58,9 +55,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -88,9 +82,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -118,9 +109,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -148,9 +136,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -178,9 +163,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -208,9 +190,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -238,9 +217,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -268,9 +244,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -298,9 +271,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -328,9 +298,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -358,9 +325,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -388,9 +352,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -413,9 +374,6 @@ orgs.newOrg('eclipse-keypop') {
         "support"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
     orgs.newRepo('keypop-reader-cpp-api') {
       allow_merge_commit: true,
@@ -435,9 +393,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -465,9 +420,6 @@ orgs.newOrg('eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -493,9 +445,6 @@ orgs.newOrg('eclipse-keypop') {
         "support"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
