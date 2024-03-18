@@ -2,4 +2,4 @@
 *             @eclipse-keypop/eclipsefdn-releng
 
 # Otterdog related configurations are also owned by the security team.
-/otterdog/**  @eclipse-keypop/eclipsefdn-security @eclipse-keypop/eclipsefdn-releng
+/otterdog/**  @eclipse-keypop/eclipsefdn-security
