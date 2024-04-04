@@ -7,7 +7,6 @@ on:
       - 'main'
     paths:
       - 'otterdog/*.jsonnet'
-      - 'otterdog/*.json'
       - 'docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/build-page.yml'
@@ -70,10 +69,6 @@ jobs:
           cp -r ../${{ github.repository_owner }}/otterdog/* orgs/${{ github.repository_owner }}
         working-directory: otterdog-configs
 
-      - name: Generate current configuration as markdown
-        run: ../otterdog/otterdog.sh show ${{ github.repository_owner }} -c otterdog.json --markdown --output-dir generated-site
-        working-directory: otterdog-configs
-
       - name: Generate default configuration as markdown
         run: ../otterdog/otterdog.sh show-default ${{ github.repository_owner }} -c otterdog.json --markdown > default.txt
         working-directory: otterdog-configs
@@ -85,7 +80,6 @@ jobs:
           path: |
             otterdog-configs/default.txt
             otterdog-configs/orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet
-            otterdog-configs/generated-site/
 
   build-page:
     runs-on: ubuntu-latest
@@ -99,7 +93,6 @@ jobs:
       - shell: bash
         run: |
           cat default.txt >> ./docs/playground.md
-          cp generated-site/*.md ./docs/
           cp orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet ./docs/jsonnet/
       - uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
         with:
