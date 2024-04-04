@@ -10,7 +10,7 @@ General documentation for using the self-service (stored in directory *otterdog*
 
 ## Current configuration
 
-The current configuration can be reviewed [here](configuration.md).
+The current configuration can be reviewed in the [Otterdog Dashboard](https://otterdog.eclipse.org/organizations/{{ org_id }}).
 
 ## Playground
 
