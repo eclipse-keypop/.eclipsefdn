@@ -3,7 +3,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 orgs.newOrg('eclipse-keypop') {
   settings+: {
     blog: "http://keypop.org/",
-    dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Organization grouging together all the Eclipse Keypop project repositories",
     email: "keypop-dev@eclipse.org",
     name: "Eclipse Keypop",
