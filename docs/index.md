@@ -14,4 +14,4 @@ The current configuration can be reviewed in the [Otterdog Dashboard](https://ot
 
 ## Playground
 
-A playground for creating and testing resources in jsonnet format is available [here](playground.md).
+A playground for creating and testing resources in jsonnet format is available [here](https://otterdog.eclipse.org/organizations/{{ org_id }}/playground).
