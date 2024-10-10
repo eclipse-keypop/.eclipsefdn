@@ -6,14 +6,13 @@ on:
     branches:
       - 'main'
     paths:
-      - 'otterdog/*.jsonnet'
       - 'docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/build-page.yml'
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -21,80 +20,11 @@ permissions:
   id-token: write
 
 jobs:
-  generate-markdown:
-    # do not run the workflow in the template repo itself
-    if: ${{ !contains (github.repository, '/.eclipsefdn-template') }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout eclipse-csi/otterdog
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-        with:
-          repository: eclipse-csi/otterdog
-          path: otterdog
-
-      - name: Checkout EclipseFdn/otterdog-configs
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-        with:
-          repository: EclipseFdn/otterdog-configs
-          path: otterdog-configs
-
-      # checkout the HEAD ref
-      - name: Checkout HEAD
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-        with:
-          path: ${{ github.repository_owner }}
-
-      - name: Install jsonnet-bundler
-        run: |
-          go install -a github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb@v0.5.1
-          echo $(go env GOPATH)/bin >> $GITHUB_PATH
-
-      - name: Install poetry
-        run: pipx install poetry
-
-      - name: Setup Python
-        uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
-        with:
-          python-version: '3.10'
-          cache: 'poetry'
-
-      - name: Install dependencies with poetry
-        run: |
-          poetry install --only=main
-        working-directory: otterdog
-
-      - name: Copy configuration from HEAD ref
-        run: |
-          mkdir -p orgs/${{ github.repository_owner }}
-          cp -r ../${{ github.repository_owner }}/otterdog/* orgs/${{ github.repository_owner }}
-        working-directory: otterdog-configs
-
-      - name: Generate default configuration as markdown
-        run: ../otterdog/otterdog.sh show-default ${{ github.repository_owner }} -c otterdog.json --markdown > default.txt
-        working-directory: otterdog-configs
-
-      - name: Upload generated site content
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
-        with:
-          name: generated-site
-          path: |
-            otterdog-configs/default.txt
-            otterdog-configs/orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet
-
   build-page:
     runs-on: ubuntu-latest
-    needs: generate-markdown
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - name: Download generated site content
-        uses: actions/download-artifact@eaceaf801fd36c7dee90939fad912460b18a1ffe # v4.1.2
-        with:
-          name: generated-site
-      - shell: bash
-        run: |
-          cat default.txt >> ./docs/playground.md
-          cp orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet ./docs/jsonnet/
-      - uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      - uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3 # v5.2.0
         with:
           python-version: 3.x
           cache: 'pip'
@@ -102,7 +32,7 @@ jobs:
       - name: Build with Mkdocs
         run: mkdocs build
       - name: Setup Pages
-        uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4.0.0
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
       - name: Upload artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
 
@@ -115,4 +45,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@decdde0ac072f6dcbe43649d82d9c635fff5b4e4 # v4.0.4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
