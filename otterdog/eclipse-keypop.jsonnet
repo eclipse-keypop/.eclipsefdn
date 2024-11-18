@@ -452,5 +452,77 @@ orgs.newOrg('eclipse-keypop') {
         },
       ],
     },
+    orgs.newRepo('keypop-api-docs') {
+      local thisRepo = self,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      code_scanning_default_enabled: false,
+      code_scanning_default_setup_enabled: false,
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: false,
+      description: "Eclipse Keypop project repository centralizing API documentation (Javadoc, Doxygen) from all Keypop libraries",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "main",
+      gh_pages_source_path: "/",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "documentation",
+        "javadoc",
+        "doxygen",
+        "keypop"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule(thisRepo.default_branch) {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+      },
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
+    orgs.newRepo('keypop-actions') {
+      local thisRepo = self,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      code_scanning_default_enabled: true,
+      code_scanning_default_setup_enabled: true,
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Keypop project repository containing reusable GitHub Actions for Keypop projects",
+      gh_pages_build_type: "disabled",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      topics+: [
+        "github-actions",
+        "ci-cd",
+        "automation",
+        "keypop"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule(thisRepo.default_branch) {
+           required_approving_review_count: 1,
+           requires_status_checks: true,
+           requires_strict_status_checks: true,
+        },
+      ],
+    },
   ],
 }
