@@ -11,6 +11,11 @@ orgs.newOrg('eclipse-keypop') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('ORG_GITHUB_BOT_TOKEN') {
+      value: "pass:bots/iot.keypop/github.com/api-token",
+    },
+  ],
   webhooks+: [
     orgs.newOrgWebhook('https://ci.eclipse.org/keypop/github-webhook/') {
       content_type: "json",
