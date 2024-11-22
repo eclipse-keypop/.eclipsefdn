@@ -461,7 +461,7 @@ orgs.newOrg('eclipse-keypop') {
       dependabot_security_updates_enabled: false,
       description: "Eclipse Keypop project repository centralizing API documentation (Javadoc, Doxygen) from all Keypop libraries",
       gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "main",
+      gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
@@ -496,6 +496,9 @@ orgs.newOrg('eclipse-keypop') {
       local thisRepo = self,
       allow_merge_commit: true,
       allow_update_branch: false,
+      code_scanning_default_languages: [
+        "python",
+      ],
       code_scanning_default_setup_enabled: true,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
