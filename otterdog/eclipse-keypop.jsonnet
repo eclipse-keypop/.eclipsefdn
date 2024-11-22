@@ -10,7 +10,8 @@ orgs.newOrg('eclipse-keypop') {
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
     },
-  },secrets+: [
+  },
+  secrets+: [
     orgs.newOrgSecret('ORG_GITHUB_BOT_TOKEN') {
       value: "pass:bots/iot.keypop/github.com/api-token",
     },
