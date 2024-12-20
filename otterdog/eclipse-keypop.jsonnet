@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-keypop') {
+orgs.newOrg('iot.keypop', 'eclipse-keypop') {
   settings+: {
     blog: "http://keypop.org/",
     description: "Organization grouging together all the Eclipse Keypop project repositories",
