@@ -45,9 +45,6 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -58,23 +55,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-card-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -85,23 +71,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-certificate-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -112,23 +87,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-certificate-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -139,23 +103,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -166,23 +119,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -193,23 +135,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -220,23 +151,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -247,23 +167,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -274,23 +183,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -301,23 +199,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-card-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -328,23 +215,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-card-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -355,14 +231,6 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-ops') {
       allow_merge_commit: true,
@@ -383,9 +251,6 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -396,23 +261,12 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-reader-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
@@ -423,14 +277,6 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "keypop"
       ],
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "gh-pages"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
     },
     orgs.newRepo('keypop-website') {
       allow_merge_commit: true,
@@ -508,7 +354,6 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse Keypop project repository containing reusable GitHub Actions for Keypop projects",
-      gh_pages_build_type: "disabled",
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
