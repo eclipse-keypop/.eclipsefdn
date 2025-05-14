@@ -278,6 +278,22 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       ],
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('keypop-storagecard-java-api') {
+     allow_merge_commit: true,
+     allow_update_branch: false,
+     delete_branch_on_merge: false,
+     description: "Eclipse Keypop project repository containing a Java implementation of the 'Storage Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
+     has_projects: false,
+     has_wiki: false,
+     homepage: "https://keypop.org/",
+     topics+: [
+       "api",
+       "component",
+       "java",
+       "keypop"
+     ],
+     web_commit_signoff_required: false,
+    },
     orgs.newRepo('keypop-website') {
       allow_merge_commit: true,
       allow_update_branch: false,
