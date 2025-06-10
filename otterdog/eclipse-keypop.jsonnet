@@ -15,6 +15,21 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newOrgSecret('ORG_GITHUB_BOT_TOKEN') {
       value: "pass:bots/iot.keypop/github.com/api-token",
     },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: "pass:bots/iot.keypop/central.sonatype.org/token-password",
+    },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: "pass:bots/iot.keypop/central.sonatype.org/token-username",
+    },
+    orgs.newOrgSecret('GPG_KEY_ID') {
+      value: "pass:bots/iot.keypop/gpg/key_id",
+    },
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
+      value: "pass:bots/iot.keypop/gpg/passphrase",
+    },
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
+      value: "pass:bots/iot.keypop/gpg/secret-subkeys.asc",
+    },
   ],
   webhooks+: [
     orgs.newOrgWebhook('https://ci.eclipse.org/keypop/github-webhook/') {
