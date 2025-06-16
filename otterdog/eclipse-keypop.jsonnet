@@ -30,11 +30,14 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newOrgSecret('GPG_PRIVATE_KEY') {
       value: "pass:bots/iot.keypop/gpg/secret-subkeys.asc",
     },
-    orgs.newOrgSecret('SSH_PASSPHRASE') {
-      value: 'pass:bots/iot.keypop/gpg.recover/passphrase',
-    },
     orgs.newOrgSecret('SSH_PRIVATE_KEY') {
-      value: 'pass:bots/iot.keypop/gpg.recover/secret-subkeys.asc',
+      value: 'pass:bots/iot.keypop/projects-storage.eclipse.org/id_rsa',
+    },
+    orgs.newOrgSecret('SSH_PASSPHRASE') {
+      value: 'pass:bots/iot.keypop/projects-storage.eclipse.org/id_rsa.passphrase',
+    },
+    orgs.newOrgSecret('SSH_USERNAME') {
+      value: 'pass:bots/iot.keypop/projects-storage.eclipse.org/username',
     },
   ],
   webhooks+: [
