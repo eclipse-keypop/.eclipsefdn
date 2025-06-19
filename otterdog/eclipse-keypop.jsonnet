@@ -24,6 +24,9 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newOrgSecret('GPG_KEY_ID') {
       value: "pass:bots/iot.keypop/gpg/key_id",
     },
+    orgs.newOrgSecret('GPG_SUBKEY_ID') {
+      value: 'pass:bots/iot.keypop/gpg/subkey_id',
+    },
     orgs.newOrgSecret('GPG_PASSPHRASE') {
       value: "pass:bots/iot.keypop/gpg/passphrase",
     },
