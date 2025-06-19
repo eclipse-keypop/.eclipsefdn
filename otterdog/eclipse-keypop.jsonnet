@@ -260,6 +260,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-ops') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
