@@ -24,6 +24,9 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newOrgSecret('GPG_KEY_ID') {
       value: "pass:bots/iot.keypop/gpg/key_id",
     },
+    orgs.newOrgSecret('GPG_SUBKEY_ID') {
+      value: 'pass:bots/iot.keypop/gpg/subkey_id',
+    },
     orgs.newOrgSecret('GPG_PASSPHRASE') {
       value: "pass:bots/iot.keypop/gpg/passphrase",
     },
@@ -257,6 +260,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-ops') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -388,6 +392,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       allow_merge_commit: true,
       allow_update_branch: false,
       code_scanning_default_languages: [
+        "actions",
         "python",
       ],
       code_scanning_default_setup_enabled: true,
