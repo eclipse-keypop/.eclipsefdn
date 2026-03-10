@@ -56,7 +56,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('.github') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Repository hosting settings of GitHub organization & repositories for the Eclipse Keypop project",
       has_projects: false,
       has_wiki: false,
@@ -70,7 +70,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-card-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -86,7 +86,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-card-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -102,7 +102,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-certificate-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -118,7 +118,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-certificate-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -134,7 +134,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-crypto-asymmetric-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -150,7 +150,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-crypto-asymmetric-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -166,7 +166,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-crypto-legacysam-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -182,7 +182,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-crypto-legacysam-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -198,7 +198,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-crypto-symmetric-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -214,7 +214,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-calypso-crypto-symmetric-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -230,7 +230,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-card-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -246,7 +246,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-card-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -263,7 +263,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Repository hosting the Continuous Integration settings of the Eclipse Keypop project",
       has_projects: false,
       has_wiki: false,
@@ -277,7 +277,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-reader-cpp-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -293,7 +293,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-reader-java-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
       has_projects: false,
       has_wiki: false,
@@ -309,8 +309,24 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-storagecard-java-api') {
      allow_merge_commit: true,
      allow_update_branch: false,
-     delete_branch_on_merge: false,
+     delete_branch_on_merge: true,
      description: "Eclipse Keypop project repository containing a Java implementation of the 'Storage Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
+     has_projects: false,
+     has_wiki: false,
+     homepage: "https://keypop.org/",
+     topics+: [
+       "api",
+       "component",
+       "java",
+       "keypop"
+     ],
+     web_commit_signoff_required: false,
+    },
+    orgs.newRepo('keypop-genericcard-jvm-api') {
+     allow_merge_commit: true,
+     allow_update_branch: false,
+     delete_branch_on_merge: true,
+     description: "Eclipse Keypop project repository containing a Java implementation of the 'Generic Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
      has_projects: false,
      has_wiki: false,
      homepage: "https://keypop.org/",
@@ -325,7 +341,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     orgs.newRepo('keypop-website') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       description: "Repository hosting the Eclipse Keypop project website: https://keypop.org/",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
@@ -352,7 +368,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       allow_merge_commit: true,
       allow_update_branch: false,
       code_scanning_default_setup_enabled: false,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: false,
       description: "Eclipse Keypop project repository centralizing API documentation (Javadoc, Doxygen) from all Keypop libraries",
       gh_pages_build_type: "legacy",
@@ -396,7 +412,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
         "python",
       ],
       code_scanning_default_setup_enabled: true,
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "Eclipse Keypop project repository containing reusable GitHub Actions for Keypop projects",
       has_projects: false,
