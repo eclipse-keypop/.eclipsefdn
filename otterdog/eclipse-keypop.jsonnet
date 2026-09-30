@@ -61,6 +61,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "keypop",
         "support"
@@ -75,6 +76,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -91,6 +93,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -107,6 +110,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -123,6 +127,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -139,6 +144,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -155,6 +161,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -171,6 +178,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -187,6 +195,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -203,6 +212,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -219,6 +229,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -235,6 +246,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -251,6 +263,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -282,6 +295,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -298,6 +312,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -314,6 +329,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      has_projects: false,
      has_wiki: false,
      homepage: "https://keypop.org/",
+     private_vulnerability_reporting_enabled: true,
      topics+: [
        "api",
        "component",
@@ -330,6 +346,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      has_projects: false,
      has_wiki: false,
      homepage: "https://keypop.org/",
+     private_vulnerability_reporting_enabled: true,
      topics+: [
        "api",
        "component",
@@ -346,6 +363,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      has_projects: false,
      has_wiki: false,
      homepage: "https://keypop.org/",
+     private_vulnerability_reporting_enabled: true,
      topics+: [
        "api",
        "component",
@@ -362,6 +380,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "api",
         "component",
@@ -381,6 +400,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "keypop",
         "support"
@@ -409,6 +429,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "documentation",
         "javadoc",
@@ -450,6 +471,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "github-actions",
         "ci-cd",
