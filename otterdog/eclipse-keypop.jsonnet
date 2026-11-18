@@ -272,6 +272,34 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       ],
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('keypop-cpp-conan-recipes') {
+      local thisRepo = self,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: true,
+      dependabot_security_updates_enabled: true,
+      description: "Conan recipes for Eclipse Keypop C++ APIs",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://keypop.org/",
+      private_vulnerability_reporting_enabled: true,
+      topics+: [
+        "conan",
+        "cpp",
+        "keypop"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule(thisRepo.default_branch) {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+    },
     orgs.newRepo('keypop-ops') {
       archived: true,
       allow_merge_commit: true,
