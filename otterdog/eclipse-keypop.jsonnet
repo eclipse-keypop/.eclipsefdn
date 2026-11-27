@@ -52,9 +52,26 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       ],
     },
   ],
+  rulesets+: [
+    orgs.newOrgRuleset('linear-history') {
+      include_repo_names: [
+        "~ALL"
+      ],
+      exclude_repo_names: [
+        ".eclipsefdn"
+      ],
+      include_refs+: [
+        "~DEFAULT_BRANCH"
+      ],
+      required_pull_request: null,
+      required_status_checks: null,
+      requires_linear_history: true,
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Repository hosting settings of GitHub organization & repositories for the Eclipse Keypop project",
@@ -62,6 +79,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "keypop",
         "support"
@@ -69,7 +87,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-card-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -77,6 +96,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -86,7 +106,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-card-java-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -94,6 +115,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -103,7 +125,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-certificate-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -111,6 +134,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -120,7 +144,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-certificate-java-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Certificate API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -128,6 +153,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -137,7 +163,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -145,6 +172,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -154,7 +182,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-java-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -162,6 +191,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -171,7 +201,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -179,6 +210,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -188,7 +220,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-java-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -196,6 +229,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -205,7 +239,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -213,6 +248,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -222,7 +258,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-java-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -230,6 +267,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -239,7 +277,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-card-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -247,6 +286,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -256,7 +296,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-card-java-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -264,6 +305,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -274,7 +316,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     },
     orgs.newRepo('keypop-cpp-conan-recipes') {
       local thisRepo = self,
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
@@ -283,6 +326,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "conan",
         "cpp",
@@ -316,7 +360,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-reader-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a C++ implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -324,6 +369,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -333,7 +379,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-reader-java-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Java implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -341,6 +388,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -350,7 +398,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-storagecard-cpp-api') {
-     allow_merge_commit: true,
+     allow_merge_commit: false,
+     allow_rebase_merge: false,
      allow_update_branch: false,
      delete_branch_on_merge: true,
      description: "Eclipse Keypop project repository containing a C++ implementation of the 'Storage Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -358,6 +407,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      has_wiki: false,
      homepage: "https://keypop.org/",
      private_vulnerability_reporting_enabled: true,
+     squash_merge_commit_title: "PR_TITLE",
      topics+: [
        "api",
        "component",
@@ -367,7 +417,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-storagecard-java-api') {
-     allow_merge_commit: true,
+     allow_merge_commit: false,
+     allow_rebase_merge: false,
      allow_update_branch: false,
      delete_branch_on_merge: true,
      description: "Eclipse Keypop project repository containing a Java implementation of the 'Storage Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -375,6 +426,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      has_wiki: false,
      homepage: "https://keypop.org/",
      private_vulnerability_reporting_enabled: true,
+     squash_merge_commit_title: "PR_TITLE",
      topics+: [
        "api",
        "component",
@@ -384,7 +436,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-genericcard-jvm-api') {
-     allow_merge_commit: true,
+     allow_merge_commit: false,
+     allow_rebase_merge: false,
      allow_update_branch: false,
      delete_branch_on_merge: true,
      description: "Eclipse Keypop project repository containing a Java implementation of the 'Generic Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -392,6 +445,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      has_wiki: false,
      homepage: "https://keypop.org/",
      private_vulnerability_reporting_enabled: true,
+     squash_merge_commit_title: "PR_TITLE",
      topics+: [
        "api",
        "component",
@@ -401,7 +455,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
      web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-genericcard-cpp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
      description: "Eclipse Keypop project repository containing a C++ implementation of the 'Generic Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -416,9 +471,11 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
        "keypop"
      ],
      web_commit_signoff_required: false,
+      squash_merge_commit_title: "PR_TITLE",
     },
     orgs.newRepo('keypop-calypso-card-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Calypso Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -426,6 +483,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -436,7 +494,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-asymmetric-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -444,6 +503,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -454,7 +514,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-legacysam-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Calypso Legacy SAM Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -462,6 +523,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -472,7 +534,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-calypso-crypto-symmetric-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Calypso Symmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -480,6 +543,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -490,7 +554,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-card-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -498,6 +563,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -508,7 +574,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-genericcard-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Generic Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -516,6 +583,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -526,7 +594,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-reader-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Reader API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -534,6 +603,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -547,7 +617,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       aliases: [
         "keypop-definitions-jvm-api"
       ],
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Reader Definitions API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -555,6 +626,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -565,7 +637,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-storagecard-kmp-api') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Eclipse Keypop project repository containing a Kotlin Multiplatform implementation of the 'Storage Card API' standardized by the Calypso Networks association for ticketing terminal processing smart card",
@@ -573,6 +646,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "api",
         "component",
@@ -583,7 +657,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('keypop-website') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: true,
       description: "Repository hosting the Eclipse Keypop project website: https://keypop.org/",
@@ -594,6 +669,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "keypop",
         "support"
@@ -610,7 +686,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     },
     orgs.newRepo('keypop-api-docs') {
       local thisRepo = self,
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       code_scanning_default_setup_enabled: false,
       delete_branch_on_merge: true,
@@ -623,6 +700,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "documentation",
         "javadoc",
@@ -651,7 +729,8 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
     },
     orgs.newRepo('keypop-actions') {
       local thisRepo = self,
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       code_scanning_default_languages+: [
         "actions",
@@ -665,6 +744,7 @@ orgs.newOrg('iot.keypop', 'eclipse-keypop') {
       has_wiki: false,
       homepage: "https://keypop.org/",
       private_vulnerability_reporting_enabled: true,
+      squash_merge_commit_title: "PR_TITLE",
       topics+: [
         "github-actions",
         "ci-cd",
